@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zubar-sim"
+version = "0.1.0"
+dependencies = [
+  "numpy",
+  "opencv-contrib-python",
+  "matplotlib"
+]
+
+[project.scripts]
+zubar-sim = "zubar_sim.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/zubar_sim"]
